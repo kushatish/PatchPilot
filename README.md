@@ -129,7 +129,7 @@ The automated tests cover retries, reproduction gates, source search, import han
 
 The synthetic cases cover empty averages, repeated whitespace in slugs, and inclusive bounds. Their reference responses are authored. Independent tests are added only after repair generation, so the backend never sees them. These results establish that the workflow handles several small bug patterns; they do not measure Claude's ability to solve unfamiliar issues.
 
-The Click example reproduces a real historical bug at a recorded commit. No AI-generated repair of that case is claimed. Docker execution and remote PR creation have not been verified in the local environment. The configured GitHub Actions jobs need to run before their results can be reported.
+The Click example reproduces a real historical bug at a recorded commit. No AI-generated repair of that case is claimed. The Docker demo passed on GitHub Actions, alongside project checks on Python 3.10 and 3.12. Live AI repairs and actual draft pull request publishing still need separate verification.
 
 The [validation record](docs/VALIDATION.md) keeps these distinctions together.
 
