@@ -1,0 +1,12 @@
+.git
+.env
+.venv
+venv
+__pycache__
+.pytest_cache
+workdir
+output
+*.zip
+PatchPilot-updated
+PatchPilot-v2
+PatchPilot-v2.1

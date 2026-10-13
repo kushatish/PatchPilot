@@ -1,0 +1,42 @@
+{
+  "mode": "recorded_replay",
+  "synthetic_cases": 3,
+  "verified_with_holdout": 3,
+  "rate": 1.0,
+  "results": [
+    {
+      "case": "empty-average",
+      "status": "fixed",
+      "regression_reproduced": true,
+      "holdout_passed": true,
+      "attempts": 1,
+      "seconds": 1.96,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "artifacts": "empty-average"
+    },
+    {
+      "case": "whitespace-slug",
+      "status": "fixed",
+      "regression_reproduced": true,
+      "holdout_passed": true,
+      "attempts": 1,
+      "seconds": 2.009,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "artifacts": "whitespace-slug"
+    },
+    {
+      "case": "inclusive-clamp",
+      "status": "fixed",
+      "regression_reproduced": true,
+      "holdout_passed": true,
+      "attempts": 1,
+      "seconds": 1.949,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "artifacts": "inclusive-clamp"
+    }
+  ],
+  "limitation": "Recorded replay validates workflow only. Synthetic AI evaluation is not real-world issue performance."
+}

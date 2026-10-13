@@ -1,0 +1,6 @@
+--- a/slugger.py
++++ b/slugger.py
+@@ -1,2 +1,2 @@
+ def slugify(text):
+-    return text.lower().replace(' ', '-')
++    return '-'.join(text.lower().split())

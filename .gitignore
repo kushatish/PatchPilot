@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+workdir/
+output/
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+*.zip
+.DS_Store
+PatchPilot-updated/
+PatchPilot-v2/
+PatchPilot-v2.1/

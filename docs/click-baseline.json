@@ -1,0 +1,10 @@
+{
+  "repository": "pallets/click",
+  "issue": 2395,
+  "ref": "8.1.3",
+  "commit": "9c6f4c8e1bb8670ce827c98559f57f6ee5935cd0",
+  "mode": "independent_manual_reproduction",
+  "ai_fix_attempted": false,
+  "returncode": 1,
+  "output": "FF                                                                       [100%]\n=================================== FAILURES ===================================\n_______________ test_format_filename_is_safe_to_print[foo\\udce9] _______________\n\nfilename = 'foo\\udce9'\n\n    @pytest.mark.parametrize('filename', ['foo\\udce9', b'foo\\xe9'])\n    def test_format_filename_is_safe_to_print(filename):\n        result = click.format_filename(filename)\n        # Display output should encode safely; literal Unicode surrogates cannot.\n>       result.encode('utf-8', errors='strict')\nE       UnicodeEncodeError: 'utf-8' codec can't encode character '\\udce9' in position 3: surrogates not allowed\n\n<project>/benchmarks/click_reproducer.py:10: UnicodeEncodeError\n________________ test_format_filename_is_safe_to_print[foo\\xe9] ________________\n\nfilename = b'foo\\xe9'\n\n    @pytest.mark.parametrize('filename', ['foo\\udce9', b'foo\\xe9'])\n    def test_format_filename_is_safe_to_print(filename):\n        result = click.format_filename(filename)\n        # Display output should encode safely; literal Unicode surrogates cannot.\n>       result.encode('utf-8', errors='strict')\nE       UnicodeEncodeError: 'utf-8' codec can't encode character '\\udce9' in position 3: surrogates not allowed\n\n<project>/benchmarks/click_reproducer.py:10: UnicodeEncodeError\n=========================== short test summary info ============================\nFAILED ../../..<project>/benchmarks/click_reproducer.py::test_format_filename_is_safe_to_print[foo\\udce9]\nFAILED ../../..<project>/benchmarks/click_reproducer.py::test_format_filename_is_safe_to_print[foo\\xe9]\n2 failed in 0.10s\n"
+}

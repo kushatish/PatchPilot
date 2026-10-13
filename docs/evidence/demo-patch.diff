@@ -1,0 +1,14 @@
+--- a/csv_parser.py
++++ b/csv_parser.py
+@@ -15,9 +15,8 @@
+     name = row.get("name", "").strip()
+     amount = float(row.get("amount", 0) or 0)
+ 
+-    # BUG: this blows up with ValueError when row["date"] == ""
+-    date_str = row.get("date", "")
+-    date = datetime.strptime(date_str, "%Y-%m-%d")
++    date_str = row.get("date", "").strip()
++    date = datetime.strptime(date_str, "%Y-%m-%d") if date_str else None
+ 
+     return {"name": name, "amount": amount, "date": date}
+ 

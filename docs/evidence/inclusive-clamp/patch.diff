@@ -1,0 +1,6 @@
+--- a/bounds.py
++++ b/bounds.py
+@@ -1,2 +1,2 @@
+ def clamp(value, lower, upper):
+-    return min(max(value, lower), upper - 1)
++    return min(max(value, lower), upper)
